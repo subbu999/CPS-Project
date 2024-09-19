@@ -1,0 +1,66 @@
+<swiper-container (swiperslidechange)="onSlideChange($event)" loop="true" navigation="true" pagination="true"
+    pagination-clickable="true" effect="fade" keyboard="true" autoplay-delay="3000"
+    autoplay-disable-on-interaction="false">
+    <swiper-slide>
+        <img src="../../assets/img/meia-plates-1.jpg" alt="">
+        <div class="caption">
+            <div class="title">
+                <h4 *ngIf="activeSlide===0" @fadeSlideUp>Media Plates</h4>
+            </div>
+            <div class="text">
+                <p *ngIf="activeSlide===0" @fadeSlideDown>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iure,
+                    itaque?</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <img src="../../assets/img/glassware.jpg" alt="">
+        <div class="caption">
+            <div class="title">
+                <h4 *ngIf="activeSlide===1" @fadeSlideUp>Glassware</h4>
+            </div>
+            <div class="text">
+                <p *ngIf="activeSlide===1" @fadeSlideDown>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iure,
+                    itaque?</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <img src="../../assets/img/liquid-handling-instruments.jpg" alt="">
+        <div class="caption">
+            <div class="title">
+                <h4 *ngIf="activeSlide===2" @fadeSlideUp>Liquid Handling</h4>
+            </div>
+            <div class="text">
+                <p *ngIf="activeSlide===2" @fadeSlideDown>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iure, itaque?</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <img src="../../assets/img/fogger-disinfactant.jpg" alt="">
+        <div class="caption">
+            <div class="title">
+                <h4 *ngIf="activeSlide===3" @fadeSlideUp>Fogger and Disinfectant</h4>
+            </div>
+            <div class="text">
+                <p *ngIf="activeSlide===3" @fadeSlideDown>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iure, itaque?</p>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <img src="../../assets/img/lab-equipment.jpg" alt="">
+        <div class="caption">
+            <div class="title">
+                <h4 *ngIf="activeSlide===4" @fadeSlideUp>Lab Equipment</h4>
+            </div>
+            <div class="text">
+                <p *ngIf="activeSlide===4" @fadeSlideDown>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Iure, itaque?</p>
+            </div>
+        </div>
+    </swiper-slide>
+</swiper-container>
