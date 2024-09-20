@@ -11,16 +11,15 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <a routerLink="home" routerLinkActive="active" class="nav-link" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">HOME</a>
+                                data-bs-target=".navbar-collapse.show" (click)="deActiveActiveClass()">HOME</a>
                         </li>
                         <li class="nav-item">
                             <a routerLink="about" routerLinkActive="active" class="nav-link" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">ABOUT US</a>
+                                data-bs-target=".navbar-collapse.show" (click)="deActiveActiveClass()">ABOUT US</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a routerLink="products" routerLinkActive="active" class="nav-link dropdown-toggle"
-                                role="button" (click)="toggleDDM($event)" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" [ngClass]="{'active':isDropdownActive}" role="button"
+                                (click)="toggleDDM($event)" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span style="user-select: none;">OUR
                                     PRODUCTS</span>
                             </a>
@@ -28,7 +27,7 @@
 
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/erp" data-bs-toggle="collapse"
+                                        routerLink="/products/media-plates" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Ready To Use Media Plates
                                     </a>
@@ -36,7 +35,7 @@
 
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/mobile-app" data-bs-toggle="collapse"
+                                        routerLink="/products/biological-indicators" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Biological Indicators
                                     </a>
@@ -44,7 +43,7 @@
 
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/cloud-computing" data-bs-toggle="collapse"
+                                        routerLink="/products/filters-funnels" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Filters & Funnels
                                     </a>
@@ -52,55 +51,56 @@
 
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/glassware" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Glassware
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/fogger-disinfectant" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Fogger & Disinfectant
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/depyrogenated-tips-tubes" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Depyrogenated Tips and Tubes
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/lab-equipment" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Lab Equipments
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/stainless-steel" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
                                         Stainless Steel
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="dropdown-item" role="button" (click)="closeDDM($event)"
-                                        routerLink="/solutions/software-testing" data-bs-toggle="collapse"
+                                        routerLink="/products/liquid-handling-instruments" data-bs-toggle="collapse"
                                         data-bs-target=".navbar-collapse.show">
-                                        Liguid Handling Instruments
+                                        Liquid Handling Instruments
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a routerLink="contact" routerLinkActive="active" class="nav-link" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">OUR SERVICES</a>
+                            <a routerLink="our-services" routerLinkActive="active" class="nav-link"
+                                data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+                                (click)="deActiveActiveClass()">OUR SERVICES</a>
                         </li>
                         <li class="nav-item">
                             <a routerLink="contact" routerLinkActive="active" class="nav-link" data-bs-toggle="collapse"
-                                data-bs-target=".navbar-collapse.show">CONTACT US</a>
+                                data-bs-target=".navbar-collapse.show" (click)="deActiveActiveClass()">CONTACT US</a>
                         </li>
                     </ul>
                 </div>

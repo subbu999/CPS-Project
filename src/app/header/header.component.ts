@@ -6,8 +6,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./header.component.css'],
   animations: [
     trigger('slideInOut', [
-      state('void', style({ opacity: 0, transform: 'translateY(-100px)' })),
-      state('*', style({ opacity: 1, transform: 'translateY(0)' })),
+      state('void', style({ opacity: 0, transform: 'translateY(-40px)' })),
+      state('*', style({ opacity: 1, transform: 'translateY(0px)' })),
       transition('void <=> *', [
         animate('300ms ease-in-out')
       ])
@@ -15,6 +15,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ]
 })
 export class HeaderComponent implements OnInit {
+  isDropdownActive = false;
   isDDMOpen = false;
   constructor() { }
   toggleDDM(event: MouseEvent) {
@@ -24,6 +25,10 @@ export class HeaderComponent implements OnInit {
   closeDDM(event: MouseEvent) {
     event.stopPropagation();
     this.isDDMOpen = false;
+    this.isDropdownActive = true;
+  }
+  deActiveActiveClass() {
+    this.isDropdownActive = false;
   }
 
   ngOnInit(): void {

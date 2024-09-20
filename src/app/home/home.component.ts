@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate } from '@angular/animations';
-import SwiperCore, { Swiper } from 'swiper';
 
 @Component({
   selector: 'app-home',
@@ -27,19 +26,12 @@ import SwiperCore, { Swiper } from 'swiper';
     ]),
   ],
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
   activeSlide = 0;
   constructor() { }
-
   ngOnInit(): void {
-  }
-  ngAfterViewInit() {
-
   }
   onSlideChange(swiper: any): void {
     this.activeSlide = ((swiper.detail)[0]).realIndex;
-    console.log(((swiper.detail)[0]).realIndex);
   }
-
-
 }

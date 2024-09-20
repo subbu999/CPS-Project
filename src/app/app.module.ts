@@ -15,6 +15,16 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
+import { MediaPlatesComponent } from './products/media-plates/media-plates.component';
+import { BiologicalIndicatorsComponent } from './products/biological-indicators/biological-indicators.component';
+import { FiltersFunnelsComponent } from './products/filters-funnels/filters-funnels.component';
+import { GlasswareComponent } from './products/glassware/glassware.component';
+import { FoggerDisinfectantComponent } from './products/fogger-disinfectant/fogger-disinfectant.component';
+import { DepyrogenatedTipsTubesComponent } from './products/depyrogenated-tips-tubes/depyrogenated-tips-tubes.component';
+import { LabEquipmentComponent } from './products/lab-equipment/lab-equipment.component';
+import { StainlessSteelComponent } from './products/stainless-steel/stainless-steel.component';
+import { OurservicesComponent } from './ourservices/ourservices.component';
+import { LiquidHandlingInstrumentsComponent } from './products/liquid-handling-instruments/liquid-handling-instruments.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +34,17 @@ import { ContactComponent } from './contact/contact.component';
     FooterComponent,
     AboutComponent,
     ProductsComponent,
-    ContactComponent
+    ContactComponent,
+    MediaPlatesComponent,
+    BiologicalIndicatorsComponent,
+    FiltersFunnelsComponent,
+    GlasswareComponent,
+    FoggerDisinfectantComponent,
+    DepyrogenatedTipsTubesComponent,
+    LabEquipmentComponent,
+    StainlessSteelComponent,
+    OurservicesComponent,
+    LiquidHandlingInstrumentsComponent
   ],
   imports: [
     BrowserModule,
