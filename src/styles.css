@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: rgb(102, 0, 197) !important;
+  --secondary-color: rgb(177, 0, 118) !important;
+  --text-color: #1f1f1f;
+  --background-color: #ececec;
+  --content-bg-color: #f1f1f1;
+}
 html,
 body {
   height: 100%;
@@ -6,6 +13,7 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--background-color);
 }
 /* scrollbar styles */
 ::-webkit-scrollbar {
@@ -17,10 +25,100 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   border: 2px solid #cccccc;
-  background-color: rgb(102, 0, 197);
+  background-color: var(--secondary-color);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
+}
+
+/* Header Styles */
+.custom-heading {
+  position: relative;
+  display: inline-block;
+}
+.custom-heading::after {
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  display: block;
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--primary-color);
+}
+.custom-heading::before {
+  position: absolute;
+  bottom: 20%;
+  right: 10%;
+  display: block;
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--primary-color);
+}
+.custom-heading .heading-icon {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+/* Pre loader styles */
+/* HTML: <div class="loader"></div> */
+.loader-wrapper {
+  min-height: calc(100vh - 63px) !important;
+}
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+}
+.loader,
+.loader:before,
+.loader:after {
+  --c: no-repeat linear-gradient(#046d8b 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  animation: l18-1 1.5s infinite cubic-bezier(0, 0, 1, 1), l18-2 1.5s infinite;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  animation-timing-function: cubic-bezier(0, 0.2, 1, 1), linear;
+}
+.loader:after {
+  margin: 10px;
+  animation-timing-function: cubic-bezier(0, 0.4, 1, 1), linear;
+}
+@keyframes l18-1 {
+  0%,
+  10% {
+    background-size: 0 4px, 4px 0;
+  }
+  40%,
+  60% {
+    background-size: 100% 4px, 4px 100%;
+  }
+  90%,
+  100% {
+    background-size: 0 4px, 4px 0;
+  }
+}
+@keyframes l18-2 {
+  0%,
+  49.9% {
+    background-position: 0 0, 0 0, 100% 100%, 100% 100%;
+  }
+  50%,
+  100% {
+    background-position: 100% 0, 0 100%, 0 100%, 100% 0;
+  }
 }

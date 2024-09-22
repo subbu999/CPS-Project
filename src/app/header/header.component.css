@@ -12,10 +12,10 @@
   -o-transition: 0.4s ease-in-out;
 }
 .nav-link:hover {
-  color: rgb(242, 27, 253) !important;
+  color: var(--secondary-color) !important;
 }
 .active {
-  color: rgb(242, 27, 253) !important;
+  color: var(--secondary-color) !important;
 }
 /* menu icon styles */
 .navbar-toggler {

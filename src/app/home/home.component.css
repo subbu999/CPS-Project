@@ -1,11 +1,18 @@
 swiper-container {
+  width: 100%;
   height: calc(100vh - 86px);
 }
 
-swiper-slid img {
-  object-fit: fill;
-  height: 100%;
+swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+swiper-slide img {
+  display: block;
   width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 .caption {
   position: absolute;
@@ -43,4 +50,72 @@ swiper-slid img {
   -o-border-radius: 5px;
   font-family: Helvetica, sans-serif;
   margin-bottom: 0px !important;
+}
+
+.welcome-container button {
+  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--content-bg-color);
+
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+}
+.welcome-container button:hover {
+  border: 2px solid var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--content-bg-color);
+  background-color: var(--primary-color);
+}
+.img-wrapper {
+  height: 400px;
+  max-width: 100%;
+}
+.img-wrapper img {
+  height: 100%;
+  width: 100%;
+}
+.text-wrapper {
+  background-color: var(--content-bg-color);
+}
+/* card styles */
+.card {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  /* height: 100%; */
+  border: 1px solid #b6a7b6d6;
+  border-radius: 0%;
+  -webkit-border-radius: 0%;
+  -moz-border-radius: 0%;
+  -ms-border-radius: 0%;
+  -o-border-radius: 0%;
+}
+.card:hover {
+  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+.card .card-img-top {
+  height: 250px;
+}
+.card .card-body {
+  background-color: #cdc8cdd6;
+}
+.card .btn-custom {
+  min-width: 80%;
+  background-color: var(--primary-color);
+  color: var(--content-bg-color);
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }

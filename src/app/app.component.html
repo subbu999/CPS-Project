@@ -1,10 +1,25 @@
-<header>
-  <app-header></app-header>
-</header>
+<ng-container *ngIf="loading; else content">
+  <div class="loader-wrapper d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="loader"></div>
+    <div class="loader-text">
+      <small>Loading...</small>
+    </div>
+  </div>
+</ng-container>
+<ng-template #content>
 
-<main>
-  <router-outlet></router-outlet>
-</main>
-<footer>
-  <app-footer></app-footer>
-</footer>
+  <header>
+    <app-header></app-header>
+  </header>
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>
+    <app-footer></app-footer>
+  </footer>
+  <div class="scroll-to-top" [ngClass]="{'show-scrollTop':windowScrolled}">
+    <button class="btn" (click)="onScrollTopClick()">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+  </div>
